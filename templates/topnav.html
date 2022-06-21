@@ -1,0 +1,17 @@
+<topnav>
+    <div class="topnav">
+<a href="https://www.google.co.il/?hl=iw">Search</a>
+    <a href="/homepage" >Home Page</a>
+    <a href="/contactus">Contact Us</a>
+  <a href="https://dogtime.com/dog-breeds/profiles">All Dog Breed Profiles</a>
+    <a href="/assignment3_1" >assignment3_1</a>
+    <a href="/assignment3_2" >assignment3_2</a>
+        {% if session ['logedin'] %}
+            <a> Hi, {{ session['username']}}</a>
+        {%else%}}
+        <a>Loged out</a>
+        {% endif%}
+
+
+    </div>
+</topnav>

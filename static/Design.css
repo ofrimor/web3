@@ -1,0 +1,190 @@
+
+
+#container {
+    display: grid;
+    grid-template-areas: 
+    'Header Header Header '
+    'Nav Nav Nav '
+    'Nav Nav Nav '
+    'footer footer footer'
+    'Main Main Main'
+    'nav1 nav1 nav1'
+    'nav1 nav1 nav1'
+    'nav2 nav2 nav2';
+    
+    grid-gap: 4px;
+    /* height: 360px; */
+} 
+
+/* מוודא שהגבולות של האלמנטים מתאימים */
+*** {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color:#d7a47a;
+}
+
+/* מעגל קצוות */
+img{
+    border-radius: 8px;
+    width: 50%; 
+  float:inline-end;
+  grid-area: nav1;
+}
+
+/* ממרכז את הכותרת */
+.header { 
+   grid-area: Header; 
+  font-size:4vw; color:rgb(119, 78, 7); border: 2px solid rgb(156, 94, 23);
+  background-color:#d7a47a;
+  padding: 20px;
+  text-align: center;
+}
+
+/* עושה שורה שחורה של בר */
+ .topnav {
+   grid-area: Nav; 
+  overflow: hidden;
+  background-color: rgb(48, 28, 7);
+  border-radius: 8px;
+  height:auto;
+  width: 90%;
+  float:inline-end;
+} 
+
+/* מעצב את הכתוב בבר השחור */
+ .topnav a {
+  float:left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}  
+
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+} 
+
+/* ממרכז את כל הדף */
+div {
+  
+    padding: 50px;
+    margin: 20px;
+  }
+
+  
+/* העמוד השני מפה */
+
+
+
+
+/* מגדיל ומסדר את הלבן שכותבים בו בתשובות */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  back: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border-radius: 8px;
+}
+
+/* מעצב את הsubmit בירוק ובגדול */
+input[type=submit] {
+   width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; 
+  background: rgba(199, 105, 23, 0.852);
+  transition: width 2s;
+}
+
+/* לא עושה משהו לסבמית */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* נותן את הרקע הלבן שמפריד בין הרקע לכתוב */
+div {
+  border-radius: 5px;
+  background-color: #6b462a;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* המסגרת הלבנה סביב הפרטים */
+span{
+    font-size:30px; 
+}
+
+/* כותרת משנית בדף פרטים */
+h1{
+   grid-area: footer; 
+}
+
+/* אנימציה של הבהוב */
+#ball {
+     grid-area: Main;
+    
+      height:auto;
+      width:fit-content;
+      border-radius: 100px;
+      color: white;
+      background-color: rgb(78, 51, 19);
+      font-size:larger;
+      animation: blink 1s infinite;
+}
+/* כפתור לחיצה לכתוב */
+.bottom{
+  border-radius: 8px;
+  grid-area: nav1; 
+  height:auto;
+  width:fit-content;
+  background-color:#bc8151;
+}
+/* הכתוב של כפתור הלחיצה */
+#demo{
+  grid-area: nav2; 
+  font-size:medium;
+}
+
+/* סעיף אחרון */
+.active {
+  background-color: rgb(118, 63, 1);
+}
+li {
+  display: inline;
+}
+
+
+
+/* כל השורות שבמסגרת של עמוד הצור קשר-מהמצגת של הגריד רספונסיבי */
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+  border: 1px solid red;
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
+
+
+
+@keyframes blink {
+    0% {opacity: 0;}
+    33% {opacity: 0.5;}
+    66% {opacity: 1;}
+}
+  

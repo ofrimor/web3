@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href={{url_for('static', filename='Design.css')}}>
+    <script defer src={{url_for('static', filename='JS.js')}}></script>
+    <title>Document</title>
+
+</head>
+
+
+
+<body >
+
+ {% include('topnav.html') %}
+
+  <div>
+    <!-- התחלת המסגרת השחורה -->
+
+    <!-- הכותרת של הדף -->
+<div class="header">Alpha's fan page </div>
+
+  <button class= bottom onclick="typeWriter2()">Click me to surprise (click again..)</button>
+  <p id="demo2"></p> 
+
+  <form action="/action_page.php">
+    <fieldset>
+     <legend><span>&#128054;</span></legend>
+
+     <center>
+    <img src={{url_for('static', filename='alpha.jpg')}} alt="pic" width="500" height="400">
+    </center>
+    
+    <!-- סיום המסגרת השחורה -->
+  </form>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}About Page{% endblock %}
+
+{% set page = 'assignment3_1' %}
+
+{% block tohen %}
+
+
+<div class = "hello_container">
+    {% if username =='Lover' %}
+         <h1 class="hello_title"> Hello {{username | title()}} </h1>
+    {%else %}
+        <h1 class="hello_title">Hello stranger</h1>
+    {%endif%}
+    </div>
+
+    <h1>some ditails</h1>
+        <div class="container">
+        <h2>Dog names</h2>
+        <br>
+            {% for dog_name in dog_names%}
+                <h3>{{dog_name| upper()}}</h3>
+            {% endfor %}
+    </div>
+           <div class="container">
+        <h2>dog types</h2>
+        <br>
+            {% for dog_types in dog_types%}
+                <h3>{{dog_types| title()}} Type</h3>
+            {% endfor %}
+    </div>
+
+
+{% endblock %}
+
+{% block super %}
+    {{super()}}
+
+{% endblock %}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href={{url_for('static', filename='Design.css')}}>
+    <script defer src={{url_for('static', filename='JS.js')}}></script>
+    <title>Document</title>
+</head>
+
+
+<body >
+  <div>
+    <div id="container">
+         <!-- כותרת העמוד-הפגשו עם אלפא -->
+      <div class="header">Meet with Alpha </div>
+  
+       <!-- שורת הבר -->
+  {% include('topnav.html') %}
+       
+    
+        <!-- JS שמתפעל אלמנט של לחיצה וריצת טקסט -->
+      <button class= bottom onclick="typeWriter()">Do you want to meet ALPHA?</button>
+      <p id="demo"></p> 
+
+         <!-- כותרת העמוד השלישית -->
+      <div id="ball"> but first, we will need sum details.. About your dog of course </div>
+    </div>
+    
+    
+    <!-- הסמיילי במסגרת השחורה -->
+    <form action="/action_page.php"> <fieldset> <legend><span>&#128054;</span></legend>
+
+    <div> 
+      <div class="details">
+       <!-- הכותרת כתיבת שם הכלב והתיבה הלבנה לכתיבה -->
+       <div class="col0"><form action="/action_page.php">
+        <label for="DOGname">Name</label>
+        <input type="text" id="fname" name="name" placeholder="Write down your dog's name"></div>
+
+       <!-- האופציות לבחור סוג כלב והשורת גלילה -->
+     <div class="col1">
+       <label for="Is your dog">Is your dog</label>
+      
+        <select id="Is your dog" name="Is your dog"> 
+        <option value="select">Choose from the options</option>
+        <option value="dont Love people">Love people</option>
+        <option value="dont Love dogs">Love dogs</option>
+        <option value="love everybody">love everybody</option>
+        </select>
+      </div>
+        
+        <!-- לכתוב תאריך לידה -->
+        <div class="col3">
+          <label for="birthday">Birthday:</label>
+          <input type="date" id="birthday" name="birthday"><br><br>
+        </div>
+
+        <!-- לבחור סוג כלב -->
+      <div class="col4">
+       <p>Choose your Dog breed:</p>
+      <form>
+      <input type="radio" id="Golden" name="fav_dog" value="Golden">
+        <label for="html">Golden</label><br>
+        <input type="radio" id="Shih Tzu" name="fav_dog" value="Shih Tzu">
+        <label for="css">Shih Tzu</label><br>
+        <input type="radio" id="husky" name="fav_dog" value="husky">
+        <label for="husky">Husky</label><br>
+       </form>
+       </div>
+      </div>
+        <!-- הסבמית -->
+        <div id="submit1"> <input type="submit" value="Submit"> </div>
+
+      </div>
+      </form>
+  </div>
+    
+</form>
+</fieldset>
+</form>
+</div>
+
+
+</body>
+</html>
