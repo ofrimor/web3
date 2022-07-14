@@ -1,7 +1,9 @@
 from flask import Flask, redirect, url_for, render_template, request, session, jsonify
 from datetime import timedelta
+import mysql.connector
 
 app = Flask(__name__)
+
 
 app.secret_key = '123'
 app.config['SESSION_PERMANENT'] = True
@@ -101,6 +103,15 @@ def logout_func():
 def session_func():
     # print(session['CHECK'])
     return jsonify(dict(session))
+
+
+#--------4-------------#
+from pages.assignment_4.assignment_4 import assignment_4
+app.register_blueprint(assignment_4)
+
+
+
+
 
 if __name__ == '__main__':
     app.run(debug=True)

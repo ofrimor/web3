@@ -188,3 +188,11 @@ li {
     66% {opacity: 1;}
 }
   
+
+.outer-source__container{
+    color: white;
+}
+.invisible{
+    display: none;
+}
+
