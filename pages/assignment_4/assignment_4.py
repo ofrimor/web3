@@ -135,4 +135,5 @@ def get_user(USER_ID):
         }
         return jsonify(user_dict)
     return jsonify({
-        'message': 'User not found. try again puppy'})
+        'message': 'User not found. try again puppy'
+    })
